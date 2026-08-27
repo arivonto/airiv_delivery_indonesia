@@ -63,7 +63,7 @@ class DeliveryCarrier(models.Model):
     ], string="RajaOngkir Courier", default='jne')
 
     def _compute_shipping_weight_indonesia(self, order):
-        total_weight_kg = order.order_line._get_estimated_weight() or 1.0
+        total_weight_kg = order._get_estimated_weight() or 1.0
         # Convert to Grams for Indonesian couriers
         return max(int(total_weight_kg * 1000), 1000)
 
