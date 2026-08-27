@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_delivery_carrier_form_indonesia" model="ir.ui.view">
+            <field name="name">delivery.carrier.form.indonesia</field>
+            <field name="model">delivery.carrier</field>
+            <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Biteship Aggregator" name="biteship_settings" invisible="delivery_type != 'biteship'">
+                        <group>
+                            <group string="Biteship API Credentials">
+                                <field name="biteship_api_key" password="True" required="delivery_type == 'biteship'"/>
+                                <field name="biteship_environment"/>
+                                <field name="biteship_origin_area_id" required="delivery_type == 'biteship'"/>
+                            </group>
+                            <group string="Courier Routing Service">
+                                <field name="biteship_courier_code" required="delivery_type == 'biteship'"/>
+                                <field name="biteship_service_type"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="RajaOngkir Engine" name="rajaongkir_settings" invisible="delivery_type != 'rajaongkir'">
+                        <group>
+                            <group string="RajaOngkir Settings">
+                                <field name="rajaongkir_api_key" password="True" required="delivery_type == 'rajaongkir'"/>
+                                <field name="rajaongkir_account_type"/>
+                                <field name="rajaongkir_origin_id" required="delivery_type == 'rajaongkir'"/>
+                            </group>
+                            <group string="Courier Selection">
+                                <field name="rajaongkir_courier" required="delivery_type == 'rajaongkir'"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
