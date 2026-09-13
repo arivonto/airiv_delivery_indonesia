@@ -12,7 +12,7 @@ Unified Indonesian Shipping & Delivery Connector for Odoo 18 Community.
 - Automated Tracking Number & Waybill (AWB / Resi) Synchronization
 - Zero External Server Overhead - Direct REST API Client
 """,
-    'author': 'Riv Cloud Management',
+    'author': 'AIRIV',
     'website': 'https://airiv.id',
     'url': 'https://github.com/arivonto/airiv_delivery_indonesia/blob/18.0/static/description/index.html',
     'license': 'LGPL-3',
