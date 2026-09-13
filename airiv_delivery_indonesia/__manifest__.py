@@ -14,10 +14,11 @@ Unified Indonesian Shipping & Delivery Connector for Odoo 18 Community.
 """,
     'author': 'Riv Cloud Management',
     'website': 'https://airiv.id',
+    'url': 'https://github.com/arivonto/airiv_delivery_indonesia/blob/18.0/static/description/index.html',
     'license': 'LGPL-3',
     'price': 0.0,
     'currency': 'EUR',
-    'depends': ['delivery', 'stock', 'sale_management'],
+    'depends': ['delivery', 'stock', 'sale_management', 'airiv_os_core'],
     'data': [
         'security/ir.model.access.csv',
         'views/delivery_carrier_views.xml',

@@ -62,9 +62,9 @@
 
         <!-- Root App Drawer Menu -->
         <menuitem id="menu_airiv_delivery_root"
-                  name="Indonesian Logistics"
-                  action="action_delivery_carrier_indonesia"
-                  web_icon="airiv_delivery_indonesia,static/description/icon.png"
+                  name="AIRIV Indonesian Logistics"
+                  action="airiv_os_core.action_airiv_launchpad_logistics"
+                  web_icon="airiv_delivery_indonesia,static/description/airiv_store_icon_128.png"
                   sequence="35"
                   groups="base.group_user"/>
 
